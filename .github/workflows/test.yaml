@@ -11,6 +11,13 @@ concurrency:
   cancel-in-progress: true
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*'
+      - '!docs/**'
+      - '!README.md'
   pull_request:
     paths:
       - '**/*'

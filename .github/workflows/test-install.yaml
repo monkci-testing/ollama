@@ -1,6 +1,12 @@
 name: test-install
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/install.sh'
+      - '.github/workflows/test-install.yaml'
   pull_request:
     paths:
       - 'scripts/install.sh'
